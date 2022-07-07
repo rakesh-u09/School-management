@@ -735,15 +735,16 @@ def view_teacher():
 	f = open ("TeacherData.txt", 'r')
 	norecord = 0
 	for line in f1:
-		norecord += 1
-		line = line.rstrip('\n')
-		word = line.split('|')
-		f.seek(int(word[1]))
-		line1 = f.readline().rstrip()
-		word1 = line1.split('|')
-		Id.append(word1[0])
-		Tname.append(word1[1])
-		TClass.append(word1[2])
+		if not line.startswith('*'):
+			norecord += 1
+			line = line.rstrip('\n')
+			word = line.split('|')
+			f.seek(int(word[1]))
+			line1 = f.readline().rstrip()
+			word1 = line1.split('|')
+			Id.append(word1[0])
+			Tname.append(word1[1])
+			TClass.append(word1[2])
 
 	f.close()
 	t_list=Listbox(teacher_menu,height=50,width=20)
