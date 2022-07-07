@@ -112,6 +112,7 @@ def register_in():
 def register_check():
 	global id
 
+
 	id=id_input.get()
 	name=name_input.get()
 	email=email_input.get()
@@ -670,8 +671,8 @@ def Main_Menu():
 	status = Label(base,text=("Date and time logged in: " + current_time),bd=1,relief=SUNKEN,anchor=W,bg='light pink')
 	orionLabel=Label(base, text="RVITM",bg='dark orange',font=("Castellar", "50","bold","italic","underline"),fg="black")
 	backbutton=Button(base,command=student_logout,text=" Log out ",bg='black',fg='white',height=2,width=10,font=in_font)
-	welcomeLabel=Label(base,text=("Welcome "+id+"!"),font=("Freestyle Script","50","bold"))
-	img = ImageTk.PhotoImage(Image.open('myschool.jpg').resize((550,290)))
+	welcomeLabel=Label(base,text=("Welcome "+ id +"!"),font=("Freestyle Script","50","bold"))
+	img = ImageTk.PhotoImage(Image.open('about-us-rvitm.jpg').resize((550,290)))
 	topFrame=Frame(base)
 	bottomFrame=Frame(base)
 
