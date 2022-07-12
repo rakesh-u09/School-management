@@ -16,31 +16,31 @@ def login_in():
 
 	login_menu=Tk()
 	login_menu.wm_title("Login")
-	login_menu.geometry('900x600')
+	login_menu.geometry('1500x900')
 	login_menu.resizable(True,True)
-	k_font = tkinter.font.Font(family='Times new roman', size=16, weight=tkinter.font.BOLD)
-	orionLabel=Label(login_menu, text="RV Institute of Technology",bg='dark orange',font=("Castellar", "25","bold","italic","underline"),fg="black")
-	subLabel=Label(login_menu, text="Go Change The World",font=("Castellar", "16","bold","italic"))
+	k_font = tkinter.font.Font(family='Helvetica', size=16, weight=tkinter.font.BOLD)
+	orionLabel=Label(login_menu, text="School Management System",font=("Castellar", "25","bold","italic","underline"),fg="black")
+	subLabel=Label(login_menu, text="From Student",font=("Castellar", "16","bold","italic"))
 	id_label=Label(login_menu,text="Enter Your ID:",height=3, font=k_font)
 	password_label=Label(login_menu,text="Enter Password:",height=3,font=k_font)
 	id_input_login=Entry(login_menu, width=30)
 	password_input_login=Entry(login_menu, width=30)
-	loginbutton1=Button(login_menu,command=login_check,text=" Login ",bg='light blue',height='1',width='8', font=k_font,  bd = '5')
-	registerbutton=Button(login_menu,command=register_in,text=" Register ",bg='green',fg='white',height='2',width='11',font=k_font, bd = '5',)
-	feedbackbutton=Button(login_menu,command=feedback_read,text=" Feedback ",bg='yellow',height='2',width='11',font=k_font, bd = '5')
-	adminbutton=Button(login_menu,command=admin_in,text=" Admin Login ",bg='red', fg='white',height='2',width='11',font=k_font, bd = '5')
+	loginbutton1=Button(login_menu,command=login_check,text=" Login ",height='1',width='8', font=k_font,  bd = '5')
+	registerbutton=Button(login_menu,command=register_in,text=" Register ",height='2',width='11',font=k_font, bd = '5',)
+	feedbackbutton=Button(login_menu,command=feedback_read,text=" Feedback ",height='2',width='11',font=k_font, bd = '5')
+	adminbutton=Button(login_menu,command=admin_in,text=" Admin Login ",height='2',width='11',font=k_font, bd = '5')
 	password_input_login.config(show="*")
 
-	orionLabel.place(x=160, y=20)
-	subLabel.place(x=190, y=80)
+	orionLabel.place(x=250, y=20)
+	# subLabel.place(x=190, y=80)
 	id_label.place(x=10,y=120)
 	id_input_login.place(x=160,y=150)
 	password_label.place(x=10,y=170)
 	password_input_login.place(x=160,y=200)
-	loginbutton1.place(x=30,y=240)
+	loginbutton1.place(x=250,y=240)
 	registerbutton.place(x=500,y=150)
-	adminbutton.place(x=500,y=230)
-	feedbackbutton.place(x=500,y=310)
+	adminbutton.place(x=700,y=150)
+	feedbackbutton.place(x=900,y=150)
 
 	login_menu.mainloop()
 
@@ -211,10 +211,10 @@ def Admin_Opt():
 		opt_menu.resizable(0,0)
 		k_font = tkinter.font.Font(family='Times new roman', size=13, weight=tkinter.font.BOLD)
 
-		addTeacherbutton=Button(opt_menu,command=add_teacher,text=" Add Teacher ",bg='pink',height=2,width=12,font=k_font)
+		addTeacherbutton=Button(opt_menu,command=add_teacher,text=" Add Teacher ",bg='light pink',height=2,width=12,font=k_font)
 		delTeacherbutton=Button(opt_menu,command=del_teacher,text=" Remove Teacher ",bg='light blue',height=2,width=12,font=k_font)
 		addStudentbutton=Button(opt_menu,command=add_student,text=" Add Student ",bg='light blue',height=2,width=12,font=k_font)
-		delStudentbutton=Button(opt_menu,command=del_student,text=" Remove Student ",bg='pink',height=2,width=12,font=k_font)
+		delStudentbutton=Button(opt_menu,command=del_student,text=" Remove Student ",bg='light pink',height=2,width=12,font=k_font)
 		backbutton=Button(opt_menu,command=reopen_login,text=" Log out ",bg='red',fg='white',height=2,width=10,font=k_font)
 
 		addTeacherbutton.place(height=50, x=50, y=100)
@@ -291,7 +291,7 @@ def add_teacher():
 	add_menu.wm_title("Add Teacher")
 	add_menu.geometry('450x400')
 	add_menu.resizable(0,0)
-	k_font = tkinter.font.Font(family='Times new roman', size=15, weight=tkinter.font.BOLD)
+	k_font = tkinter.font.Font(family='Helvetica', size=15, weight=tkinter.font.BOLD)
 
 	teacher_id_label=Label(add_menu,font=k_font,text="Teacher ID (Should have 5 digits)")
 	teacher_name_label=Label(add_menu,font=k_font,text="Teacher Name")
@@ -299,7 +299,7 @@ def add_teacher():
 	teacher_id=Entry(add_menu,width=30)
 	teacher_name=Entry(add_menu,width=30)
 	class_name_section=Entry(add_menu,width=30)
-	addbutton=Button(add_menu,command=add_teacher_check,text=" Add Teacher ",bg='dark orange',height=1,width=12,font=k_font)
+	addbutton=Button(add_menu,command=add_teacher_check,text=" Add Teacher ",bg='light orange',height=1,width=12,font=k_font)
 
 	teacher_id_label.grid(row=1,sticky=E)
 	teacher_id.grid(row=1,column=1)
@@ -470,8 +470,8 @@ def del_teacher():
 	b_label=Label(del_menu,text="Teacher ID",font=k_font)
 	dt_id=Entry(del_menu)
 	delbutton1=Button(del_menu,command=del_teacher_check,text=" Remove Teacher ",bg='red',height=1,width=13,font=k_font)
-	teacher_list2.configure(background="pink")
-	teacher_list3.configure(background="pink")
+	teacher_list2.configure(background="light pink")
+	teacher_list3.configure(background="light pink")
 	teacher_list.configure(background="light grey")
 
 	teacher_label=Label(del_menu,font=k_font,text="Id")
@@ -669,10 +669,10 @@ def Main_Menu():
 
 	#Bunch of labels
 	status = Label(base,text=("Date and time logged in: " + current_time),bd=1,relief=SUNKEN,anchor=W,bg='light pink')
-	orionLabel=Label(base, text="RVITM",bg='dark orange',font=("Castellar", "50","bold","italic","underline"),fg="black")
+	orionLabel=Label(base, text="School",font=("Courier", "50","bold","italic","underline"),fg="black")
 	backbutton=Button(base,command=student_logout,text=" Log out ",bg='black',fg='white',height=2,width=10,font=in_font)
 	welcomeLabel=Label(base,text=("Welcome "+ id +"!"),font=("Freestyle Script","50","bold"))
-	img = ImageTk.PhotoImage(Image.open('about-us-rvitm.jpg').resize((550,290)))
+	img = ImageTk.PhotoImage(Image.open('classroom.gif').resize((550,290)))
 	topFrame=Frame(base)
 	bottomFrame=Frame(base)
 
@@ -687,9 +687,9 @@ def Main_Menu():
 
 	#Buttons
 	view1=Button(bottomFrame,bg="black",fg="white",text="View Teachers",font=in_font,height=5,width=15,command=view_teacher)
-	view2=Button(bottomFrame,bg="dark orange",text="View Students",font=in_font,height=5,width=15,command=view_student)
-	search_butn1=Button(bottomFrame,bg="grey",fg="white",text="Search for a teacher",font=in_font,height=2,width=16,command=search_teacher)
-	search_butn2=Button(bottomFrame,bg="dark orange",fg="white",text="Search for a student",font=in_font,height=2,width=16,command=search_student)	
+	view2=Button(bottomFrame,bg="white",text="View Students",font=in_font,height=5,width=15,command=view_student)
+	search_butn1=Button(bottomFrame,bg="black",fg="white",text="Search for a teacher",font=in_font,height=2,width=16,command=search_teacher)
+	search_butn2=Button(bottomFrame,bg="white",fg="black",text="Search for a student",font=in_font,height=2,width=16,command=search_student)	
 	feedback_butn=Button(bottomFrame,bg="black",fg="white",text="Feedback",font=in_font,height=5,width=15,command=feedback_in)
 
 	#Positioning of buttons
@@ -758,8 +758,8 @@ def view_teacher():
 		t_list2.insert(0,TClass[num])
 
 	t_list.configure(background="light grey")
-	t_list1.configure(background="pink")
-	t_list2.configure(background="pink")
+	t_list1.configure(background="white")
+	t_list2.configure(background="white")
 	t_label=Label(teacher_menu,text="Id")
 	t_label2=Label(teacher_menu,text="Teacher Name")
 	t_label3=Label(teacher_menu,text="Class")
