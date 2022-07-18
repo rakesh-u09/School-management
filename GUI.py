@@ -16,7 +16,7 @@ def login_in():
 
 	login_menu=Tk()
 	login_menu.wm_title("Login")
-	login_menu.geometry('1500x900')
+	login_menu.geometry('1800x1800')
 	login_menu.resizable(True,True)
 	k_font = tkinter.font.Font(family='Helvetica', size=16, weight=tkinter.font.BOLD)
 	orionLabel=Label(login_menu, text="School Management System",font=("Castellar", "25","bold","italic","underline"),fg="black")
@@ -31,13 +31,13 @@ def login_in():
 	adminbutton=Button(login_menu,command=admin_in,text=" Admin Login ",height='2',width='11',font=k_font, bd = '5')
 	password_input_login.config(show="*")
 
-	orionLabel.place(x=250, y=20)
+	orionLabel.place(x=400, y=20)
 	# subLabel.place(x=190, y=80)
 	id_label.place(x=10,y=120)
 	id_input_login.place(x=160,y=150)
 	password_label.place(x=10,y=170)
 	password_input_login.place(x=160,y=200)
-	loginbutton1.place(x=250,y=240)
+	loginbutton1.place(x=200,y=240)
 	registerbutton.place(x=500,y=150)
 	adminbutton.place(x=700,y=150)
 	feedbackbutton.place(x=900,y=150)
@@ -207,15 +207,18 @@ def Admin_Opt():
 
 		opt_menu=Tk()
 		opt_menu.wm_title("Admin_menu")
-		opt_menu.geometry('450x450')
+		opt_menu.geometry('500x500')
 		opt_menu.resizable(0,0)
 		k_font = tkinter.font.Font(family='Times new roman', size=13, weight=tkinter.font.BOLD)
+		orionLabel=Label(opt_menu, text="Admin Board",font=("Castellar", "25","bold","italic","underline"),fg="black")
 
-		addTeacherbutton=Button(opt_menu,command=add_teacher,text=" Add Teacher ",bg='light pink',height=2,width=12,font=k_font)
+
+		addTeacherbutton=Button(opt_menu,command=add_teacher,text=" Add Teacher ",bg='light blue',height=2,width=12,font=k_font)
 		delTeacherbutton=Button(opt_menu,command=del_teacher,text=" Remove Teacher ",bg='light blue',height=2,width=12,font=k_font)
 		addStudentbutton=Button(opt_menu,command=add_student,text=" Add Student ",bg='light blue',height=2,width=12,font=k_font)
 		delStudentbutton=Button(opt_menu,command=del_student,text=" Remove Student ",bg='light pink',height=2,width=12,font=k_font)
 		backbutton=Button(opt_menu,command=reopen_login,text=" Log out ",bg='red',fg='white',height=2,width=10,font=k_font)
+		orionLabel.place(x=70, y=20)
 
 		addTeacherbutton.place(height=50, x=50, y=100)
 		delTeacherbutton.place(height=50, x=300, y=100)
@@ -299,7 +302,7 @@ def add_teacher():
 	teacher_id=Entry(add_menu,width=30)
 	teacher_name=Entry(add_menu,width=30)
 	class_name_section=Entry(add_menu,width=30)
-	addbutton=Button(add_menu,command=add_teacher_check,text=" Add Teacher ",bg='light orange',height=1,width=12,font=k_font)
+	addbutton=Button(add_menu,command=add_teacher_check,text=" Add Teacher ",bg='light blue',height=1,width=12,font=k_font)
 
 	teacher_id_label.grid(row=1,sticky=E)
 	teacher_id.grid(row=1,column=1)
